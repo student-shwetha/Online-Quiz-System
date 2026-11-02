@@ -1,0 +1,20 @@
+
+name: Online Quiz System CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    name: Repository Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Confirm workflow runs
+        run: echo "Online Quiz System workflow executed successfully!"
