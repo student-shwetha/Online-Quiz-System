@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Online Quiz System</h1>
+        <p class="subtitle">Test your knowledge!</p>
+
+        <form id="participantForm">
+            <label for="participantName">Your name</label>
+            <input id="participantName" name="participantName" type="text"
+                maxlength="100" autocomplete="name" required>
+            <button id="startBtn" type="submit">Start Quiz</button>
+        </form>
+
+        <section id="quiz" aria-live="polite"></section>
+        <p id="quizMessage" class="message" role="status" aria-live="polite"></p>
+        <a class="admin-link" href="admin.html">Admin login</a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

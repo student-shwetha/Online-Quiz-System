@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <main class="admin-container">
+        <header class="page-header">
+            <div>
+                <h1>Quiz Administration</h1>
+                <p>Sign in to manage quiz questions.</p>
+            </div>
+            <a href="index.html">Participant quiz</a>
+        </header>
+
+        <section id="loginPanel" class="panel">
+            <h2>Admin login</h2>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text"
+                    maxlength="50" autocomplete="username" required>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password"
+                    autocomplete="current-password" required>
+                <button id="loginButton" type="submit">Log in</button>
+            </form>
+        </section>
+
+        <section id="dashboard" hidden>
+            <div class="dashboard-header">
+                <h2>Manage questions</h2>
+                <button id="logoutButton" class="secondary" type="button">Log out</button>
+            </div>
+
+            <section class="panel">
+                <h3 id="formTitle">Add a question</h3>
+                <form id="questionForm">
+                    <label for="questionText">Question</label>
+                    <textarea id="questionText" name="question_text"
+                        maxlength="2000" rows="3" required></textarea>
+                    <div class="options-grid">
+                        <div>
+                            <label for="optionA">Option A</label>
+                            <input id="optionA" name="option_a" maxlength="500" required>
+                        </div>
+                        <div>
+                            <label for="optionB">Option B</label>
+                            <input id="optionB" name="option_b" maxlength="500" required>
+                        </div>
+                        <div>
+                            <label for="optionC">Option C</label>
+                            <input id="optionC" name="option_c" maxlength="500" required>
+                        </div>
+                        <div>
+                            <label for="optionD">Option D</label>
+                            <input id="optionD" name="option_d" maxlength="500" required>
+                        </div>
+                    </div>
+                    <label for="correctOption">Correct answer</label>
+                    <select id="correctOption" name="correct_option" required>
+                        <option value="A">Option A</option>
+                        <option value="B">Option B</option>
+                        <option value="C">Option C</option>
+                        <option value="D">Option D</option>
+                    </select>
+                    <div class="form-actions">
+                        <button id="saveQuestionButton" type="submit">Add question</button>
+                        <button id="cancelEditButton" class="secondary" type="button" hidden>
+                            Cancel edit
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel">
+                <h3>Question list</h3>
+                <div id="questionList" class="question-list"></div>
+            </section>
+        </section>
+
+        <p id="adminMessage" class="message" role="status" aria-live="polite"></p>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>
