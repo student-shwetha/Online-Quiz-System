@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #263b5e;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 12px 0 25px;
+    color: #666;
+}
+
+#quiz h2 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+#participantForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#participantName {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c5d3;
+    border-radius: 7px;
+    font: inherit;
+}
+
+#participantForm button {
+    display: block;
+    margin: 18px auto 0;
+}
+
+.options {
+    border: 0;
+}
+
+.options legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f4f8;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.option input {
+    flex: 0 0 auto;
+}
+
+.option:hover {
+    background: #dce8f5;
+}
+
+button {
+    background: #263b5e;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 20px;
+    font: inherit;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background: #385b8d;
+}
+
+#startBtn {
+    display: block;
+    margin: 20px auto;
+}
+
+#progress {
+    margin-bottom: 18px;
+    color: #666;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.message {
+    min-height: 1.5em;
+    margin-top: 12px;
+}
+
+.message.error {
+    color: #a32020;
+}
+
+.score {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.admin-link {
+    display: block;
+    margin-top: 24px;
+    color: #263b5e;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
